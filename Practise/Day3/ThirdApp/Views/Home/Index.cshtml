@@ -1,0 +1,18 @@
+﻿@{
+    ViewData["Title"] = "Registration form";
+}
+<h1>@ViewData["Title"]</h1>
+
+<p>Use this page to register.</p>
+<form action="/Home/StudentRegister" method="post">
+<button type="submit">Student</button>
+</form>
+<form action="/Home/EmployeeRegister" method="post">
+<button type="submit" onclick="/Home/EmployeeRegister">Employee</button>
+</form>
+@* <form action="Home/Privacy" method="post">
+    ID : <input type="number" id="id1"/><br>
+    Name : <input type="text" id="name"/><br>
+    Salary : <input type="number" id="sal"/><br>
+    <button type="submit">Submit</button>
+</form> *@

@@ -1,0 +1,25 @@
+@page
+@using Catalog
+
+@{
+    Product p1 = new Product();
+    p1.Id = 1;
+    p1.Title="Rose";
+    p1.Description="Fresh rose flowers";
+    p1.Quantity=100;
+    p1.Price=25;
+    @* p1.ImageUrl="//images//rose.jpg"; *@
+    @* Product p2 = ViewData["pkey"] as Product; *@
+}
+
+<h1>Product Catalog</h1>
+<img src= "/images/rose.jpg" width="320px" height="240px" align="right"/>
+<p><b>Id:</b> @p1.Id</p>
+<p><b>Title:</b> @p1.Title</p>
+<p><b>Description:</b> @p1.Description</p>
+<p><b>Quantity:</b> @p1.Quantity</p>
+<p><b>Price:</b> @p1.Price</p>
+<button>Add to Cart</button>
+<button>Next Product</button>
+
+@* <p>@p2</p> *@
