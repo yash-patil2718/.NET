@@ -1,0 +1,14 @@
+C:\Users\IET\Desktop\dotnet\practise yash\Person\bin\Debug\net8.0\Person.exe
+C:\Users\IET\Desktop\dotnet\practise yash\Person\bin\Debug\net8.0\Person.deps.json
+C:\Users\IET\Desktop\dotnet\practise yash\Person\bin\Debug\net8.0\Person.runtimeconfig.json
+C:\Users\IET\Desktop\dotnet\practise yash\Person\bin\Debug\net8.0\Person.dll
+C:\Users\IET\Desktop\dotnet\practise yash\Person\bin\Debug\net8.0\Person.pdb
+C:\Users\IET\Desktop\dotnet\practise yash\Person\obj\Debug\net8.0\Person.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\IET\Desktop\dotnet\practise yash\Person\obj\Debug\net8.0\Person.AssemblyInfoInputs.cache
+C:\Users\IET\Desktop\dotnet\practise yash\Person\obj\Debug\net8.0\Person.AssemblyInfo.cs
+C:\Users\IET\Desktop\dotnet\practise yash\Person\obj\Debug\net8.0\Person.csproj.CoreCompileInputs.cache
+C:\Users\IET\Desktop\dotnet\practise yash\Person\obj\Debug\net8.0\Person.dll
+C:\Users\IET\Desktop\dotnet\practise yash\Person\obj\Debug\net8.0\refint\Person.dll
+C:\Users\IET\Desktop\dotnet\practise yash\Person\obj\Debug\net8.0\Person.pdb
+C:\Users\IET\Desktop\dotnet\practise yash\Person\obj\Debug\net8.0\Person.genruntimeconfig.cache
+C:\Users\IET\Desktop\dotnet\practise yash\Person\obj\Debug\net8.0\ref\Person.dll

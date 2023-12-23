@@ -1,0 +1,14 @@
+C:\Users\IET\Desktop\dotnet\practise prashant\first\helloworldapp\bin\Debug\net8.0\helloworldapp.exe
+C:\Users\IET\Desktop\dotnet\practise prashant\first\helloworldapp\bin\Debug\net8.0\helloworldapp.deps.json
+C:\Users\IET\Desktop\dotnet\practise prashant\first\helloworldapp\bin\Debug\net8.0\helloworldapp.runtimeconfig.json
+C:\Users\IET\Desktop\dotnet\practise prashant\first\helloworldapp\bin\Debug\net8.0\helloworldapp.dll
+C:\Users\IET\Desktop\dotnet\practise prashant\first\helloworldapp\bin\Debug\net8.0\helloworldapp.pdb
+C:\Users\IET\Desktop\dotnet\practise prashant\first\helloworldapp\obj\Debug\net8.0\helloworldapp.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\IET\Desktop\dotnet\practise prashant\first\helloworldapp\obj\Debug\net8.0\helloworldapp.AssemblyInfoInputs.cache
+C:\Users\IET\Desktop\dotnet\practise prashant\first\helloworldapp\obj\Debug\net8.0\helloworldapp.AssemblyInfo.cs
+C:\Users\IET\Desktop\dotnet\practise prashant\first\helloworldapp\obj\Debug\net8.0\helloworldapp.csproj.CoreCompileInputs.cache
+C:\Users\IET\Desktop\dotnet\practise prashant\first\helloworldapp\obj\Debug\net8.0\helloworldapp.dll
+C:\Users\IET\Desktop\dotnet\practise prashant\first\helloworldapp\obj\Debug\net8.0\refint\helloworldapp.dll
+C:\Users\IET\Desktop\dotnet\practise prashant\first\helloworldapp\obj\Debug\net8.0\helloworldapp.pdb
+C:\Users\IET\Desktop\dotnet\practise prashant\first\helloworldapp\obj\Debug\net8.0\helloworldapp.genruntimeconfig.cache
+C:\Users\IET\Desktop\dotnet\practise prashant\first\helloworldapp\obj\Debug\net8.0\ref\helloworldapp.dll

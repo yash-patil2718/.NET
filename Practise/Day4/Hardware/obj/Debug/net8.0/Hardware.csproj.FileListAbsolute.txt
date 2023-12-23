@@ -1,0 +1,11 @@
+C:\Users\IET\Desktop\dotnet\practise yash\Hardware\obj\Debug\net8.0\Hardware.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\IET\Desktop\dotnet\practise yash\Hardware\obj\Debug\net8.0\Hardware.AssemblyInfoInputs.cache
+C:\Users\IET\Desktop\dotnet\practise yash\Hardware\obj\Debug\net8.0\Hardware.AssemblyInfo.cs
+C:\Users\IET\Desktop\dotnet\practise yash\Hardware\obj\Debug\net8.0\Hardware.csproj.CoreCompileInputs.cache
+C:\Users\IET\Desktop\dotnet\practise yash\Hardware\bin\Debug\net8.0\Hardware.deps.json
+C:\Users\IET\Desktop\dotnet\practise yash\Hardware\bin\Debug\net8.0\Hardware.dll
+C:\Users\IET\Desktop\dotnet\practise yash\Hardware\bin\Debug\net8.0\Hardware.pdb
+C:\Users\IET\Desktop\dotnet\practise yash\Hardware\obj\Debug\net8.0\Hardware.dll
+C:\Users\IET\Desktop\dotnet\practise yash\Hardware\obj\Debug\net8.0\refint\Hardware.dll
+C:\Users\IET\Desktop\dotnet\practise yash\Hardware\obj\Debug\net8.0\Hardware.pdb
+C:\Users\IET\Desktop\dotnet\practise yash\Hardware\obj\Debug\net8.0\ref\Hardware.dll
