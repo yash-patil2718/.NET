@@ -6,6 +6,6 @@ using MySql.Data.MySqlClient;
 
 class MenuDriven{
     // Businesslayer blayer = new Businesslayer();
-    MySqlDataReader reader =Businesslayer.showEmployee();
-    
+    // MySqlDataReader reader = Businesslayer.showEmployee();
+    List<Employee> list1 = Businesslayer.showEmployee();
 }

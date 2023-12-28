@@ -1,0 +1,13 @@
+@using BOL;
+@{
+    ViewData["Title"] = "Login Page";
+    <!-- Console.WriteLine("fvgrtg"); -->
+    Employee e = ViewData["employee"] as Employee;
+}
+<h1>Profile</h1>
+<br>
+<h3><u>Showing Details of Employee</u></h3>
+
+<h2>Name: @e.EmployeeName</h2>
+<h2>ID : @e.EmployeeId</h2>
+<h2>Company Name : @e.CompanyName</h2>

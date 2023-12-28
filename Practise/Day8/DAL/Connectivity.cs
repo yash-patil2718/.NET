@@ -1,7 +1,7 @@
 ﻿namespace DAL;
 using MySql.Data.MySqlClient;
 
-public static class Connectivity
+public class Connectivity
 {
     private static MySqlConnection conn=null;
     // private Connectivity(){
@@ -14,7 +14,7 @@ public static class Connectivity
     public static MySqlConnection getConnection(){
         Connectivity connect; 
         if(conn==null){
-        String connstr= "server=192.168.10.150;port=3306;user=dac9;password=welcome;database=employee";
+        String connstr= "server=192.168.10.150;port=3306;user=dac9;password=welcome;database=dac9";
             conn = new MySqlConnection(connstr);
             // connect = new Connectivity();
             // return connect.getConn();

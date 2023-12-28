@@ -1,26 +1,14 @@
 @using BOL;
 
-<!-- @{
+@{
     ViewData["Title"] = "Table Page";
+    List<Employee> emp = ViewData["emp"] as List<Employee>;
 }
 
 <div class="text-center">
     <h1 class="display-4">Welcome</h1>
-    <p>@ViewData["emp"]</p>
-</div> -->
+    @foreach(Employee e in emp){
+        <p>@e.Pid @e.Pname @e.Padd @e.Pmobile</p>
+    }
+</div>
 
-<!-- <div>
-@{
-    Employee p1=ViewData["emp"] as Employee;
-} -->
-
-<h1>Product Catalog</h1>
-<hr/>
-<!-- <img src="/images/jasmine.jpg" width="100" height="100"/>
-<p>Title: @p1.Pid</p>
-<p>Description:@p1.Pname</p>
-<p>Unit Price: @p1.Padd</p>
-<p>Quantity:@p1.Pmobile</p>
-<button>Add to Cart</button>
-
-</div> -->

@@ -1,6 +1,8 @@
 using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using Portal.Models;
+using BOL;
+using BLL;
 
 namespace Portal.Controllers;
 
@@ -26,6 +28,7 @@ public class HomeController : Controller
     {
         List<Employee> data =Businesslayer.showEmployee();
         ViewData["emp"]=data;
+        Console.WriteLine(ViewData["emp"]);
         return View();
     }
 
