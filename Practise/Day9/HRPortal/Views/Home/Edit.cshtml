@@ -10,13 +10,16 @@
     <form method = "post">
     <legend> Register Employee</legend>
     <div>
-    Employee Id : <input type="number" value = "@emp.EmployeeId" placeholder="@emp.EmployeeId" id="eid1" name="EmployeeId" readonly/>
+    Employee Id : <input type="number" value = "@emp.EmployeeId" placeholder="@emp.EmployeeId"  name="EmployeeId" readonly/>
     <br>
     <br>
-    Employee Name : <input type="text" placeholder="@emp.EmployeeName" id="en1" name="EmployeeName" required/>
+    Employee Name : <input type="text" placeholder="@emp.EmployeeName" name="EmployeeName" required/>
     <br>
     <br>
-    Company Name : <input type= "text" placeholder="@emp.CompanyName" id="cn1" name ="CompanyName" required/>
+    Email : <input type= "text" placeholder="@emp.Email"  name ="Email" required/>
+    <br>
+    <br>
+    Password : <input type= "text" placeholder="@emp.Password"  name ="Password" required/>
     <br>
     <br>
     <button type="submit">Submit</button>

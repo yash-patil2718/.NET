@@ -30,8 +30,8 @@ public class HomeController : Controller
 
 
     [HttpPost]
-    public IActionResult Register(string CompanyName, string EmployeeName, int EmployeeId){
-        BusinessLayer.InsertData(EmployeeId,EmployeeName,CompanyName);
+    public IActionResult Register(int EmployeeId,string EmployeeName, string Email, string Password){
+        BusinessLayer.InsertData(EmployeeId,EmployeeName, Email, Password);
         return RedirectToAction("Login");
     }
 
@@ -41,8 +41,8 @@ public class HomeController : Controller
 
     static Employee validemployee;
     [HttpPost]
-    public IActionResult Login(int EmployeeId, string EmployeeName){
-        validemployee = BusinessLayer.Login(EmployeeId, EmployeeName);
+    public IActionResult Login(string Email, string Password){
+        validemployee = BusinessLayer.Login(Email, Password);
         if(validemployee!=null){
             ViewData["employee"]=validemployee;
             return RedirectToAction("Profile");
@@ -67,8 +67,8 @@ public class HomeController : Controller
         return View();
     }
     [HttpPost]
-    public IActionResult Edit(string CompanyName, string EmployeeName, int EmployeeId){
-        BusinessLayer.EditEmployee(EmployeeId,EmployeeName,CompanyName);
+    public IActionResult Edit(int EmployeeId, string EmployeeName, string Email, string Password){
+        BusinessLayer.EditEmployee(EmployeeId,EmployeeName, Email, Password);
         return RedirectToAction("Profile");
     }
 

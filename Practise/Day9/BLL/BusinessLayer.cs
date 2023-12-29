@@ -6,32 +6,29 @@ public class BusinessLayer
 {
     static MySqlConnection conn = Connect.getConnection();
 
-    public static void InsertData(int EmployeeId1, string EmployeeName1, string CompanyName1){
-        string query = "insert into RegisterEmployee values (@EmployeeId,@EmployeeName,@CompanyName)";
+    public static void InsertData(int EmployeeId,string EmployeeName, string Email, string Password){
+        string query = "insert into RegisterEmployee values (@EmployeeId,@EmployeeName,@Email, @Password)";
         conn.Open();
         MySqlCommand command = new MySqlCommand(query,conn);
-        command.Parameters.AddWithValue("@EmployeeId",EmployeeId1);
-        command.Parameters.AddWithValue("@EmployeeName",EmployeeName1);
-        command.Parameters.AddWithValue("@CompanyName",CompanyName1);
+        command.Parameters.AddWithValue("@EmployeeId",EmployeeId);
+        command.Parameters.AddWithValue("@EmployeeName",EmployeeName);
+        command.Parameters.AddWithValue("@Email",Email);
+        command.Parameters.AddWithValue("@Password",Password);
         command.ExecuteNonQuery();
         conn.Close();
     }
 
-    public static Employee Login(int EmployeeId, string EmployeeName){
-        string query = "select * from RegisterEmployee where EmployeeId= @EmployeeId and EmployeeName = @EmployeeName";
+    public static Employee Login(string Email, string Password){
+        string query = "select * from RegisterEmployee where Email= @Email and Password = @Password";
         conn.Open();
         MySqlCommand command = new MySqlCommand(query, conn);
-        command.Parameters.AddWithValue("@EmployeeId",EmployeeId);
-        command.Parameters.AddWithValue("@EmployeeName",EmployeeName);
+        command.Parameters.AddWithValue("@Email",Email);
+        command.Parameters.AddWithValue("@Password",Password);
         MySqlDataReader reader = command.ExecuteReader();
-        // if(reader==null){
-        //     return false;
-        //     conn.Close();
-        // }
         Employee e=null;
         bool flag = false;
         while(reader.Read()){
-            e = new Employee(reader["CompanyName"].ToString(),reader["EmployeeName"].ToString(),int.Parse(reader["EmployeeId"].ToString()));
+            e = new Employee(int.Parse(reader["EmployeeId"].ToString()),reader["EmployeeName"].ToString(),reader["Email"].ToString(),reader["Password"].ToString());
             flag = true;
         }
         if(flag){
@@ -49,20 +46,21 @@ public class BusinessLayer
         MySqlCommand command = new MySqlCommand(query,conn);
         MySqlDataReader reader = command.ExecuteReader();
         while(reader.Read()){
-            Employee e = new Employee(reader["CompanyName"].ToString(),reader["EmployeeName"].ToString(),int.Parse(reader["EmployeeId"].ToString()));
+            Employee e = new Employee(int.Parse(reader["EmployeeId"].ToString()),reader["EmployeeName"].ToString(),reader["Email"].ToString(),reader["Password"].ToString());
             emp.Add(e);
         }
         conn.Close();
         return emp;
     }
 
-    public static void EditEmployee(int EmployeeId1, string EmployeeName1, string CompanyName1){
+    public static void EditEmployee(int EmployeeId, string EmployeeName, string Email, string Password){
         conn.Open();
-        string query = "update RegisterEmployee set EmployeeName = @EName , CompanyName = @CName where EmployeeId = @EId";
+        string query = "update RegisterEmployee set EmployeeName = @EName , Email = @Email, Password=@Password where EmployeeId = @EId";
         MySqlCommand command = new MySqlCommand(query,conn);
-        command.Parameters.AddWithValue("@EName",EmployeeName1);
-        command.Parameters.AddWithValue("@CName",CompanyName1);
-        command.Parameters.AddWithValue("@EId",EmployeeId1);
+        command.Parameters.AddWithValue("@EId",EmployeeId);
+        command.Parameters.AddWithValue("@EName",EmployeeName);
+        command.Parameters.AddWithValue("@Email",Email);
+        command.Parameters.AddWithValue("@Password",Password);
         command.ExecuteNonQuery();
         conn.Close();
     }

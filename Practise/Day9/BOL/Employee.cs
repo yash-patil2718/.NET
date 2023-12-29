@@ -2,17 +2,20 @@
 
 public class Employee
 {
-    public String CompanyName{get; set;}
-    public String EmployeeName{get; set;}
     public int EmployeeId{get; set;}
+    public String EmployeeName{get; set;}
+    public String Email{get; set;}
+    public String Password{get; set;}
 
-    public Employee(string CompanyName, string EmployeeName, int EmployeeId){
-        this.CompanyName = CompanyName;
+    public Employee(int EmployeeId,string EmployeeName, string Email, string Password){
+        // this.EmployeeId = EmployeeId;
         this.EmployeeName = EmployeeName;
-        this.EmployeeId = EmployeeId;
+        this.Email=Email;
+        this.Password=Password;
+        this.EmployeeId=EmployeeId;
     }
 
     public override string ToString(){
-        return (this.CompanyName+" "+ this.EmployeeName+" "+ this.EmployeeId);
+        return (this.EmployeeName+" "+this.Email+" "+this.Password);
     }
 }
