@@ -1,13 +1,23 @@
 @using BOL;
 @{
     ViewData["Title"] = "Login Page";
-    <!-- Console.WriteLine("fvgrtg"); -->
-    Employee e = ViewData["employee"] as Employee;
 }
-<h1>Profile</h1>
+<h1>All Employee Profiles</h1>
 <br>
 <h3><u>Showing Details of Employee</u></h3>
 
-<h2>Name: @e.EmployeeName</h2>
-<h2>ID : @e.EmployeeId</h2>
-<h2>Company Name : @e.CompanyName</h2>
+</br>
+</br>
+</br>
+
+@{
+    List<Employee> allEmployee = ViewData["emp"] as List<Employee>;
+    @foreach(Employee emp in allEmployee){
+        <p>
+            ID : @emp.EmployeeId<br><br>
+            Name : @emp.EmployeeName<br><br>
+            Company Name : @emp.CompanyName<br><br>
+            <a href="/Home/Edit/@emp.EmployeeId">Edit</a>&nbsp&nbsp&nbsp&nbsp<a href="/Home/Delete/@emp.EmployeeId">Delete</a><hr> 
+        </p>
+    }
+}

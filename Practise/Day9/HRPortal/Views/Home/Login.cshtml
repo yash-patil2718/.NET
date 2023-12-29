@@ -1,5 +1,6 @@
 @{
     ViewData["Title"] = "Login Page";
+    string msg = ViewData["msg"] as string;
 }
 
 
@@ -15,7 +16,11 @@
     <br>
     <br>
     <button type="submit">Login</button>
+    </br>
+    </br>
+    <a href="Register">New User?, Kindly Register...</a>
     </div>
 
     </form>
+    <p>@msg</p>
 </div>

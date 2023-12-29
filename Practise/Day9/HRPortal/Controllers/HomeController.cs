@@ -40,26 +40,44 @@ public class HomeController : Controller
     }
 
     static Employee validemployee;
-    // =new Employee("fedf","wefwef",21);
     [HttpPost]
     public IActionResult Login(int EmployeeId, string EmployeeName){
         validemployee = BusinessLayer.Login(EmployeeId, EmployeeName);
         if(validemployee!=null){
-            // Console.WriteLine("Login Successfull");
             ViewData["employee"]=validemployee;
-            // Console.WriteLine(validemployee);
             return RedirectToAction("Profile");
         }
         else{
-            // Console.WriteLine("Login Failed");
-            return RedirectToAction("Register");
+            ViewData["msg"]="Invalid Credentials!!!";
         }
         return View();
     }
 
     public IActionResult Profile(){
-        ViewData["employee"]=validemployee;
+        List<Employee> allEmployee = BusinessLayer.ViewAllEmployee();
+        ViewData["emp"]=allEmployee;
         return View();
+    }
+
+
+    public IActionResult Edit(int id){
+        List<Employee> allEmployee = BusinessLayer.ViewAllEmployee();
+        Employee emp = allEmployee.Find((e)=>e.EmployeeId==id);
+        ViewData["emp"]=emp;
+        return View();
+    }
+    [HttpPost]
+    public IActionResult Edit(string CompanyName, string EmployeeName, int EmployeeId){
+        BusinessLayer.EditEmployee(EmployeeId,EmployeeName,CompanyName);
+        return RedirectToAction("Profile");
+    }
+
+    public IActionResult Delete(int id){
+        List<Employee> allEmployee = BusinessLayer.ViewAllEmployee();
+        Employee emp = allEmployee.Find((e)=>e.EmployeeId==id);
+        ViewData["emp"]=emp;
+        BusinessLayer.DeleteEmployee(emp);
+        return RedirectToAction("Profile");
     }
 
     [ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
